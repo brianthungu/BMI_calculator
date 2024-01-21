@@ -43,7 +43,7 @@ function calculateBmi() {
   messageOutput.innerHTML = "";
   //print BMI
   realbmiOutput.innerHTML = "" + roundedBmi;
-  //appropriae ,essage for your BMI rating
+  //appropriae message for your BMI rating
   if (roundedBmi < 18.5) {
     messageOutput.innerHTML = "Underweight";
   } else if (roundedBmi <= 18.5 && roundedBmi < 24.9) {
