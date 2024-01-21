@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- bmi form -->
+    <form name="bmiForm">
+      <div class="bmi-calculator">
+        <h1>Calculate your BMI</h1>
+        <div class="bmi-calculator-weight">
+          <input
+            type="range"
+            class="weight-slider"
+            name="realweight"
+            id="myWeight"
+            min="25"
+            max="180"
+            value="50"
+          />
+          <p>
+            WEIGHT:
+            <input
+              type="number"
+              id="inputWeight"
+              value="60"
+              min="25"
+              max="180"
+              oninput="showValWeight(this.value)"
+            />
+            <span id="weight"></span> kg
+          </p>
+        </div>
+        <div class="bmi-calculator-height">
+          <input
+            type="range"
+            class="height-slider"
+            name="realheight"
+            id="myHeight"
+            min="100"
+            max="220"
+            value="160"
+          />
+          <p>
+            HEIGHT:
+            <input
+              type="number"
+              id="inputHeight"
+              name="visina"
+              value="160"
+              min="100"
+              max="220"
+              oninput="showValHeight(this.value)"
+            />
+            <span id="height"></span> cm
+          </p>
+        </div>
+        <input
+          type="button"
+          class="btn"
+          value="calculate"
+          onclick="calculateBmi()"
+        />
+        <p>
+          <strong>Your BMI: </strong>
+          <span id="yourbmi"></span>
+        </p>
+        <p class="evaluation-message">
+          <span id="evaluationMessage"></span>
+        </p>
+      </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
